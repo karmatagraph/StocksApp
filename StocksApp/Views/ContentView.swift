@@ -38,10 +38,10 @@ struct ContentView: View {
                             .frame(width: 100, height: 50)
                         VStack(alignment: .trailing){
                             Text(item.latestClose)
-                            Text("change")
                         }
                     }
                 }
+                .onDelete(perform: vm.delete(at:))
             }
             .navigationTitle("Stonks")
             .toolbar {

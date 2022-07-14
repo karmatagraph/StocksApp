@@ -46,9 +46,22 @@ final class ContentViewModel: ObservableObject {
         } catch let error {
             print(error.localizedDescription)
         }
+        stockEntities.append(newStock)
         getStockData(for: symbol)
         
         symbol = ""
+    }
+    
+    func delete(at indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        stockData.remove(at: index)
+        let stockToRemove = stockEntities.remove(at: index)
+        context.delete(stockToRemove)
+        do {
+            try context.save()
+        } catch let error {
+            print(error.localizedDescription, "__--------delete failed")
+        }
     }
     
     func loadAllSymbols() {
@@ -81,9 +94,9 @@ final class ContentViewModel: ObservableObject {
                     print(error)
                     return
                 }
-            } receiveValue: { [weak self] stockData in
+            } receiveValue: { [unowned self] stockData in
                 DispatchQueue.main.async {
-                    self?.stockData.append(stockData)
+                    self.stockData.append(stockData)
                 }
                 print(stockData)
             }
