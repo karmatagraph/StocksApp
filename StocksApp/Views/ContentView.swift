@@ -9,18 +9,19 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    @ObservedObject private var vm = ContentViewModel()
 
     var body: some View {
         NavigationView {
             List(){
-                ForEach(0...10, id: \.self) { item in
+                ForEach(vm.stockData) { item in
                     HStack{
-                        Text("symbol")
+                        Text(item.metaData?.symbol ?? "")
                         Spacer()
                         RoundedRectangle(cornerRadius: 8)
                             .frame(width: 100, height: 50)
                         VStack(alignment: .trailing){
-                            Text("value")
+                            Text(item.latestClose)
                             Text("change")
                         }
                     }

@@ -13,6 +13,9 @@
 		48466381287FD794006B9D68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48466380287FD794006B9D68 /* Preview Assets.xcassets */; };
 		48466383287FD794006B9D68 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466382287FD794006B9D68 /* Persistence.swift */; };
 		48466386287FD794006B9D68 /* StocksApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48466384287FD794006B9D68 /* StocksApp.xcdatamodeld */; };
+		4846638E287FDE28006B9D68 /* StockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846638D287FDE28006B9D68 /* StockData.swift */; };
+		48466391287FE308006B9D68 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466390287FE308006B9D68 /* ContentViewModel.swift */; };
+		48466394287FE3D1006B9D68 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466393287FE3D1006B9D68 /* ApiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		48466380287FD794006B9D68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48466382287FD794006B9D68 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		48466385287FD794006B9D68 /* StocksApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StocksApp.xcdatamodel; sourceTree = "<group>"; };
+		4846638D287FDE28006B9D68 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockData.swift; sourceTree = "<group>"; };
+		48466390287FE308006B9D68 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		48466393287FE3D1006B9D68 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +61,11 @@
 		48466378287FD78F006B9D68 /* StocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				4846638C287FDE1E006B9D68 /* Models */,
+				4846638F287FE2F5006B9D68 /* ViewModel */,
+				48466395287FF4B5006B9D68 /* Views */,
+				48466392287FE3C0006B9D68 /* Constant */,
 				48466379287FD78F006B9D68 /* StocksAppApp.swift */,
-				4846637B287FD790006B9D68 /* ContentView.swift */,
 				4846637D287FD794006B9D68 /* Assets.xcassets */,
 				48466382287FD794006B9D68 /* Persistence.swift */,
 				48466384287FD794006B9D68 /* StocksApp.xcdatamodeld */,
@@ -71,6 +80,38 @@
 				48466380287FD794006B9D68 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4846638C287FDE1E006B9D68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4846638D287FDE28006B9D68 /* StockData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4846638F287FE2F5006B9D68 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				48466390287FE308006B9D68 /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48466392287FE3C0006B9D68 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				48466393287FE3D1006B9D68 /* ApiKey.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		48466395287FF4B5006B9D68 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4846637B287FD790006B9D68 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +186,10 @@
 			files = (
 				48466383287FD794006B9D68 /* Persistence.swift in Sources */,
 				4846637C287FD790006B9D68 /* ContentView.swift in Sources */,
+				48466391287FE308006B9D68 /* ContentViewModel.swift in Sources */,
 				48466386287FD794006B9D68 /* StocksApp.xcdatamodeld in Sources */,
+				48466394287FE3D1006B9D68 /* ApiKey.swift in Sources */,
+				4846638E287FDE28006B9D68 /* StockData.swift in Sources */,
 				4846637A287FD78F006B9D68 /* StocksAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
