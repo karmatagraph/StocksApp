@@ -17,7 +17,46 @@
 		48466391287FE308006B9D68 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466390287FE308006B9D68 /* ContentViewModel.swift */; };
 		48466394287FE3D1006B9D68 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466393287FE3D1006B9D68 /* ApiKey.swift */; };
 		48466399287FFCE9006B9D68 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466398287FFCE9006B9D68 /* LineChart.swift */; };
+		484663A128802A5A006B9D68 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484663A028802A5A006B9D68 /* WidgetKit.framework */; };
+		484663A328802A5A006B9D68 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484663A228802A5A006B9D68 /* SwiftUI.framework */; };
+		484663A628802A5A006B9D68 /* StocksWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484663A528802A5A006B9D68 /* StocksWidget.swift */; };
+		484663A928802A5E006B9D68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 484663A828802A5E006B9D68 /* Assets.xcassets */; };
+		484663AB28802A5E006B9D68 /* StocksWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 484663A728802A5A006B9D68 /* StocksWidget.intentdefinition */; };
+		484663AC28802A5E006B9D68 /* StocksWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 484663A728802A5A006B9D68 /* StocksWidget.intentdefinition */; };
+		484663AF28802A5E006B9D68 /* StocksWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4846639E28802A5A006B9D68 /* StocksWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		48EE1E63288031FA00AC6C7D /* TimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE1E61288031EE00AC6C7D /* TimelineProvider.swift */; };
+		48EE1E672880324600AC6C7D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE1E652880322D00AC6C7D /* TimelineEntry.swift */; };
+		48EE1E6A2880325F00AC6C7D /* StockWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE1E692880325F00AC6C7D /* StockWidgetView.swift */; };
+		48EE1E6B288033D900AC6C7D /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466398287FFCE9006B9D68 /* LineChart.swift */; };
+		48EE1E6C288033E900AC6C7D /* StockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4846638D287FDE28006B9D68 /* StockData.swift */; };
+		48EE1E702880342200AC6C7D /* StockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE1E6F2880342200AC6C7D /* StockService.swift */; };
+		48EE1E712880351D00AC6C7D /* StockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE1E6F2880342200AC6C7D /* StockService.swift */; };
+		48EE1E722880357800AC6C7D /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48466393287FE3D1006B9D68 /* ApiKey.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		484663AD28802A5E006B9D68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4846636E287FD78F006B9D68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4846639D28802A5A006B9D68;
+			remoteInfo = StocksWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		484663B028802A5E006B9D68 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				484663AF28802A5E006B9D68 /* StocksWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		48466376287FD78F006B9D68 /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +70,18 @@
 		48466390287FE308006B9D68 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		48466393287FE3D1006B9D68 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		48466398287FFCE9006B9D68 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		4846639E28802A5A006B9D68 /* StocksWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StocksWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		484663A028802A5A006B9D68 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		484663A228802A5A006B9D68 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		484663A528802A5A006B9D68 /* StocksWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksWidget.swift; sourceTree = "<group>"; };
+		484663A728802A5A006B9D68 /* StocksWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = StocksWidget.intentdefinition; sourceTree = "<group>"; };
+		484663A828802A5E006B9D68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		484663AA28802A5E006B9D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		484663B428802D3F006B9D68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		48EE1E61288031EE00AC6C7D /* TimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineProvider.swift; sourceTree = "<group>"; };
+		48EE1E652880322D00AC6C7D /* TimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		48EE1E692880325F00AC6C7D /* StockWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockWidgetView.swift; sourceTree = "<group>"; };
+		48EE1E6F2880342200AC6C7D /* StockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +92,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4846639B28802A5A006B9D68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				484663A328802A5A006B9D68 /* SwiftUI.framework in Frameworks */,
+				484663A128802A5A006B9D68 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				48466378287FD78F006B9D68 /* StocksApp */,
+				484663A428802A5A006B9D68 /* StocksWidget */,
+				4846639F28802A5A006B9D68 /* Frameworks */,
 				48466377287FD78F006B9D68 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				48466376287FD78F006B9D68 /* StocksApp.app */,
+				4846639E28802A5A006B9D68 /* StocksWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +126,8 @@
 		48466378287FD78F006B9D68 /* StocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				484663B428802D3F006B9D68 /* Info.plist */,
+				48EE1E6E2880341500AC6C7D /* Service */,
 				4846638C287FDE1E006B9D68 /* Models */,
 				4846638F287FE2F5006B9D68 /* ViewModel */,
 				48466395287FF4B5006B9D68 /* Views */,
@@ -117,6 +182,61 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4846639F28802A5A006B9D68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				484663A028802A5A006B9D68 /* WidgetKit.framework */,
+				484663A228802A5A006B9D68 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		484663A428802A5A006B9D68 /* StocksWidget */ = {
+			isa = PBXGroup;
+			children = (
+				484663A528802A5A006B9D68 /* StocksWidget.swift */,
+				48EE1E682880325000AC6C7D /* View */,
+				48EE1E642880321A00AC6C7D /* TimelineEntry */,
+				48EE1E60288031DE00AC6C7D /* TimelineProvider */,
+				484663A728802A5A006B9D68 /* StocksWidget.intentdefinition */,
+				484663A828802A5E006B9D68 /* Assets.xcassets */,
+				484663AA28802A5E006B9D68 /* Info.plist */,
+			);
+			path = StocksWidget;
+			sourceTree = "<group>";
+		};
+		48EE1E60288031DE00AC6C7D /* TimelineProvider */ = {
+			isa = PBXGroup;
+			children = (
+				48EE1E61288031EE00AC6C7D /* TimelineProvider.swift */,
+			);
+			path = TimelineProvider;
+			sourceTree = "<group>";
+		};
+		48EE1E642880321A00AC6C7D /* TimelineEntry */ = {
+			isa = PBXGroup;
+			children = (
+				48EE1E652880322D00AC6C7D /* TimelineEntry.swift */,
+			);
+			path = TimelineEntry;
+			sourceTree = "<group>";
+		};
+		48EE1E682880325000AC6C7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48EE1E692880325F00AC6C7D /* StockWidgetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48EE1E6E2880341500AC6C7D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				48EE1E6F2880342200AC6C7D /* StockService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,15 +247,34 @@
 				48466372287FD78F006B9D68 /* Sources */,
 				48466373287FD78F006B9D68 /* Frameworks */,
 				48466374287FD78F006B9D68 /* Resources */,
+				484663B028802A5E006B9D68 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				484663AE28802A5E006B9D68 /* PBXTargetDependency */,
 			);
 			name = StocksApp;
 			productName = StocksApp;
 			productReference = 48466376287FD78F006B9D68 /* StocksApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4846639D28802A5A006B9D68 /* StocksWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 484663B328802A5E006B9D68 /* Build configuration list for PBXNativeTarget "StocksWidgetExtension" */;
+			buildPhases = (
+				4846639A28802A5A006B9D68 /* Sources */,
+				4846639B28802A5A006B9D68 /* Frameworks */,
+				4846639C28802A5A006B9D68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StocksWidgetExtension;
+			productName = StocksWidgetExtension;
+			productReference = 4846639E28802A5A006B9D68 /* StocksWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -148,6 +287,9 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					48466375287FD78F006B9D68 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					4846639D28802A5A006B9D68 = {
 						CreatedOnToolsVersion = 13.3;
 					};
 				};
@@ -166,6 +308,7 @@
 			projectRoot = "";
 			targets = (
 				48466375287FD78F006B9D68 /* StocksApp */,
+				4846639D28802A5A006B9D68 /* StocksWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +323,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4846639C28802A5A006B9D68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				484663A928802A5E006B9D68 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -191,14 +342,40 @@
 				4846637C287FD790006B9D68 /* ContentView.swift in Sources */,
 				48466391287FE308006B9D68 /* ContentViewModel.swift in Sources */,
 				48466386287FD794006B9D68 /* StocksApp.xcdatamodeld in Sources */,
+				48EE1E702880342200AC6C7D /* StockService.swift in Sources */,
 				48466399287FFCE9006B9D68 /* LineChart.swift in Sources */,
+				484663AC28802A5E006B9D68 /* StocksWidget.intentdefinition in Sources */,
 				48466394287FE3D1006B9D68 /* ApiKey.swift in Sources */,
 				4846638E287FDE28006B9D68 /* StockData.swift in Sources */,
 				4846637A287FD78F006B9D68 /* StocksAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4846639A28802A5A006B9D68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48EE1E722880357800AC6C7D /* ApiKey.swift in Sources */,
+				48EE1E712880351D00AC6C7D /* StockService.swift in Sources */,
+				48EE1E6A2880325F00AC6C7D /* StockWidgetView.swift in Sources */,
+				48EE1E63288031FA00AC6C7D /* TimelineProvider.swift in Sources */,
+				48EE1E6B288033D900AC6C7D /* LineChart.swift in Sources */,
+				48EE1E6C288033E900AC6C7D /* StockData.swift in Sources */,
+				484663A628802A5A006B9D68 /* StocksWidget.swift in Sources */,
+				484663AB28802A5E006B9D68 /* StocksWidget.intentdefinition in Sources */,
+				48EE1E672880324600AC6C7D /* TimelineEntry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		484663AE28802A5E006B9D68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4846639D28802A5A006B9D68 /* StocksWidgetExtension */;
+			targetProxy = 484663AD28802A5E006B9D68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		48466387287FD794006B9D68 /* Debug */ = {
@@ -318,6 +495,7 @@
 		4846638A287FD794006B9D68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +504,7 @@
 				DEVELOPMENT_TEAM = P7YG254GA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,6 +526,7 @@
 		4846638B287FD794006B9D68 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -355,6 +535,7 @@
 				DEVELOPMENT_TEAM = P7YG254GA3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,6 +548,60 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.karma.StocksApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		484663B128802A5E006B9D68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7YG254GA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StocksWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karma.StocksApp.StocksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		484663B228802A5E006B9D68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P7YG254GA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StocksWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = StocksWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.karma.StocksApp.StocksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,6 +625,15 @@
 			buildConfigurations = (
 				4846638A287FD794006B9D68 /* Debug */,
 				4846638B287FD794006B9D68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		484663B328802A5E006B9D68 /* Build configuration list for PBXNativeTarget "StocksWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				484663B128802A5E006B9D68 /* Debug */,
+				484663B228802A5E006B9D68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

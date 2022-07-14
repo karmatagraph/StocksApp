@@ -83,20 +83,7 @@ final class ContentViewModel: ObservableObject {
         }
     }
     func getStockData(for symbol: String) {
-        guard let url = URL(string: "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=\(symbol.uppercased())&interval=5min&apikey=\(ApiKey.apiKey)") else { return }
-        URLSession.shared
-            .dataTaskPublisher(for: url)
-        // the trymap will transform the tuple of data and response into only data with status code of 200
-            .tryMap { element -> Data in
-                guard
-                    let httpResponse = element.response as? HTTPURLResponse,
-                    httpResponse.statusCode == 200
-                else {
-                    throw URLError(.badServerResponse)
-                }
-                return element.data
-            }
-            .decode(type: StockData.self, decoder: JSONDecoder())
+        StockService.getStockData(for: symbol)
             .sink { completion in
                 switch completion {
                 case .finished:
