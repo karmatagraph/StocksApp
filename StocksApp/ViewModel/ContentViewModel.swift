@@ -24,10 +24,21 @@ final class ContentViewModel: ObservableObject {
     @Published var stockData: [StockData] = []
     @Published var symbol: String = ""
     @Published var stockEntities: [StockEntity] = []
+    @Published var symbolValid: Bool = false
     
     init() {
         loadFromCoreData()
         loadAllSymbols()
+        symbolFieldValidate()
+    }
+    
+    func symbolFieldValidate() {
+        $symbol
+            .sink { [unowned self] newValue in
+                self.symbolValid = !newValue.isEmpty
+            }
+            .store(in: &cancellables)
+
     }
     
     func loadFromCoreData() {

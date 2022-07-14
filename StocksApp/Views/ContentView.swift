@@ -21,6 +21,7 @@ struct ContentView: View {
                     } label: {
                         Text("Add")
                     }
+                    .disabled(!vm.symbolValid)
 
                     
                 }

@@ -14,9 +14,9 @@
             filePath = "StocksApp/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "delete(at:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "getStockData(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "StocksApp/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "delete(at:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "getStockData(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,9 @@
             filePath = "StocksApp/ViewModel/ContentViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "delete(at:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "getStockData(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
