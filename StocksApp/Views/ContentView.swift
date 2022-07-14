@@ -16,9 +16,15 @@ struct ContentView: View {
             List(){
                 ForEach(vm.stockData) { item in
                     HStack{
-                        Text(item.metaData?.symbol ?? "")
+                        Text(item.metaData.symbol ?? "")
                         Spacer()
-                        RoundedRectangle(cornerRadius: 8)
+                        LineChart(values: item.closeValues)
+                            .fill(
+                                LinearGradient(
+                                    colors: [.green.opacity(0.7), .green.opacity(0.2), .green.opacity(0)],
+                                    startPoint: .top,
+                                    endPoint: .bottom)
+                            )
                             .frame(width: 100, height: 50)
                         VStack(alignment: .trailing){
                             Text(item.latestClose)

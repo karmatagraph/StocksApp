@@ -27,8 +27,8 @@ import Foundation
 
 // MARK: - StockData
 struct StockData: Codable, Identifiable {
-    let metaData: MetaData?
-    let timeSeries5Min: [String: TimeSeries5Min]?
+    let metaData: MetaData
+    let timeSeries5Min: [String: TimeSeries5Min]
     
     private enum CodingKeys: String, CodingKey {
         case metaData = "Meta Data"
@@ -37,8 +37,16 @@ struct StockData: Codable, Identifiable {
     
     let id = UUID()
     var latestClose: String {
-        timeSeries5Min?.first?.value.close ?? "NaN"
+        timeSeries5Min.first?.value.close ?? "NaN"
     }
+    
+    var closeValues: [Double] {
+        let rawValues = timeSeries5Min.values.map { Double($0.close!)! }
+        let max = rawValues.max()!
+        let min = rawValues.min()!
+        return rawValues.map {($0 - min * 0.95) / (max - min * 0.95)}
+    }
+    
 }
 
 // MARK: - MetaData
