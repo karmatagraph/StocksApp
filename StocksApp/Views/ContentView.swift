@@ -10,10 +10,20 @@ import CoreData
 
 struct ContentView: View {
     @ObservedObject private var vm = ContentViewModel()
-
     var body: some View {
         NavigationView {
             List(){
+                HStack {
+                    TextField("Symbol" , text: $vm.symbol)
+                        .textFieldStyle(.roundedBorder)
+                    Button {
+                        vm.addStock()
+                    } label: {
+                        Text("Add")
+                    }
+
+                    
+                }
                 ForEach(vm.stockData) { item in
                     HStack{
                         Text(item.metaData.symbol ?? "")

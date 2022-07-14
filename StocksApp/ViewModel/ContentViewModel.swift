@@ -10,25 +10,52 @@ import Combine
 import SwiftUI
 
 final class ContentViewModel: ObservableObject {
+    
+    private let context = PersistenceController.shared.container.viewContext
     // cancellables
     private var cancellables = Set<AnyCancellable>()
-    private let symbols: [String] = [
-        "APPL",
-        "TSLA",
-        "IBM"
-    ]
+//    private let symbols: [String] = [
+//        "APPL",
+//        "TSLA",
+//        "IBM"
+//    ]
     
     // to store the stock data
     @Published var stockData: [StockData] = []
+    @Published var symbol: String = ""
+    @Published var stockEntities: [StockEntity] = []
     
     init() {
-        getStockData(for: "IBM")
+        loadFromCoreData()
+        loadAllSymbols()
+    }
+    
+    func loadFromCoreData() {
+        do {
+            stockEntities = try context.fetch(StockEntity.fetchRequest())
+        } catch let error {
+            print(error.localizedDescription, "-------couldn't fetch from the core data")
+        }
+    }
+    
+    func addStock() {
+        let newStock = StockEntity(context: context)
+        newStock.symbol = symbol
+        do {
+            try context.save()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        getStockData(for: symbol)
+        
+        symbol = ""
     }
     
     func loadAllSymbols() {
         stockData = []
-        symbols.forEach { symbol in
-            getStockData(for: symbol)
+        stockEntities.forEach { stockEntity in
+            getStockData(for: stockEntity.symbol ?? "")
+            print(stockEntity.symbol,"---------------stonks")
         }
     }
     func getStockData(for symbol: String) {
