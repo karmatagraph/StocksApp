@@ -10,6 +10,16 @@ import SwiftUI
 import Intents
 
 @main
+struct StocksWidgetBundle: WidgetBundle {
+    
+    @WidgetBundleBuilder
+    var body: some Widget {
+        StocksWidget()
+    }
+    
+}
+
+
 struct StocksWidget: Widget {
     let kind: String = "StocksWidget"
 
